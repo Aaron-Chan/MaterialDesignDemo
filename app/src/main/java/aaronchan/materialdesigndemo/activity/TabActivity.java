@@ -5,12 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 
 import aaronchan.materialdesigndemo.R;
 
-public class ToolBarActivity extends AppCompatActivity {
+public class TabActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tool_bar);
-        findViewById(R.id.toolbar);
+        setContentView(R.layout.activity_tab);
     }
 }

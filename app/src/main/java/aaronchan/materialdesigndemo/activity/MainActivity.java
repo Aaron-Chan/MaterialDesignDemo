@@ -2,18 +2,25 @@ package aaronchan.materialdesigndemo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 
 import aaronchan.materialdesigndemo.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Optional;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @BindView(R.id.btn_theme)
     Button mBtnTheme;
+    @BindView(R.id.btn_toolbar)
+    @Nullable
+    Button mBtnToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +29,18 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.btn_theme)
-    public void onClick() {
-        Intent intent = new Intent(this, ThemeActivity.class);
+    @Optional
+    @OnClick({R.id.btn_theme, R.id.btn_toolbar})
+    public void onClick(View view) {
+        Intent intent = null;
+        switch (view.getId()) {
+            case R.id.btn_theme:
+                intent = new Intent(this, ThemeActivity.class);
+                break;
+            case R.id.btn_toolbar:
+                intent = new Intent(this, ToolBarActivity.class);
+                break;
+        }
         startActivity(intent);
     }
 }
