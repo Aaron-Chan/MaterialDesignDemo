@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_toolbar)
     @Nullable
     Button mBtnToolbar;
+    @BindView(R.id.btn_tab)
+    Button mBtnTab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Optional
-    @OnClick({R.id.btn_theme, R.id.btn_toolbar})
+    @OnClick({R.id.btn_theme, R.id.btn_toolbar, R.id.btn_tab})
     public void onClick(View view) {
         Intent intent = null;
         switch (view.getId()) {
@@ -39,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_toolbar:
                 intent = new Intent(this, ToolBarActivity.class);
+                break;
+            case R.id.btn_tab:
+                intent = new Intent(this, TabActivity.class);
                 break;
         }
         startActivity(intent);

@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".activity.ToolBarActivity">
         </activity>
-        <activity android:name=".activity.TabActivity">
+        <activity android:name=".activity.TabActivity"
+            android:theme="@style/CustomTheme2">
         </activity>
     </application>
 

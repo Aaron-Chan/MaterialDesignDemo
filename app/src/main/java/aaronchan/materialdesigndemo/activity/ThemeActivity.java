@@ -38,7 +38,7 @@ public class ThemeActivity extends AppCompatActivity {
                 ThemeUtil.changeTheme(this, ThemeUtil.CUSTOM_THEME1);
                 break;
             case R.id.btn_custom_theme2:
-                ThemeUtil.changeTheme(this, ThemeUtil.CUSTOM_THEME2);
+                ThemeUtil.changeTheme(this, ThemeUtil.NO_TITLE_THEME);
                 break;
             case R.id.btn_default_theme:
                 ThemeUtil.changeTheme(this, ThemeUtil.DEFAULT_THEME);

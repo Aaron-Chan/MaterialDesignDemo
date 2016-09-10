@@ -10,10 +10,10 @@ import aaronchan.materialdesigndemo.R;
  */
 public class ThemeUtil {
     public static final int CUSTOM_THEME1 = R.style.CustomTheme1;
-    public static final int CUSTOM_THEME2 = R.style.CustomTheme2;
+    public static final int NO_TITLE_THEME = R.style.CustomTheme2;
     public static final int DEFAULT_THEME = R.style.AppTheme;
     public static final int DARK_THEME = R.style.darkTheme;
-    private static int sTheme = DEFAULT_THEME;
+    public static int sTheme = DEFAULT_THEME;
 
     public static void onActivityCreateSetTheme(Activity activity) {
         activity.setTheme(sTheme);
@@ -23,5 +23,7 @@ public class ThemeUtil {
         sTheme = theme;
         activity.recreate();
     }
+
+
 
 }
