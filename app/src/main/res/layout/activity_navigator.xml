@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aaronchan.materialdesigndemo.activity.NavigatorActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+
+            <include
+                layout="@layout/view_toolbar"
+                />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right|bottom"
+            android:src="@drawable/ic_add_circle_black_24dp"
+            android:tint="@android:color/white"
+            />
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/view_navigation"
+        android:layout_width="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="start"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/view_navigator_header"
+        app:menu="@menu/menu_navigator"/>
+</android.support.v4.widget.DrawerLayout>

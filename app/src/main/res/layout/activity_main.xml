@@ -29,5 +29,11 @@
         android:layout_height="wrap_content"
         android:text="TAB"/>
 
+    <Button
+        android:id="@+id/btn_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Navigation"/>
+
 
 </LinearLayout>

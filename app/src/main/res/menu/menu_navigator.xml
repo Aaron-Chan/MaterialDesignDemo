@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@android:drawable/ic_menu_call"
+            android:tint="@color/RedA200"
+            android:title="first"/>
+        <item
+            android:icon="@android:drawable/ic_menu_camera"
+            android:tint="@color/RedA200"
+            android:title="second"/>
+        <item
+            android:icon="@android:drawable/ic_menu_day"
+            android:tint="@color/RedA200"
+            android:title="third"/>
+    </group>
+</menu>

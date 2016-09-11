@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     Button mBtnToolbar;
     @BindView(R.id.btn_tab)
     Button mBtnTab;
+    @BindView(R.id.btn_navigation)
+    Button mBtnNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Optional
-    @OnClick({R.id.btn_theme, R.id.btn_toolbar, R.id.btn_tab})
+    @OnClick({R.id.btn_theme, R.id.btn_toolbar, R.id.btn_tab, R.id.btn_navigation})
     public void onClick(View view) {
         Intent intent = null;
         switch (view.getId()) {
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_tab:
                 intent = new Intent(this, TabActivity.class);
+                break;
+            case R.id.btn_navigation:
+                intent = new Intent(this, NavigatorActivity.class);
                 break;
         }
         startActivity(intent);
