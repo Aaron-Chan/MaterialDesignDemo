@@ -1,8 +1,12 @@
 package aaronchan.materialdesigndemo.fragment;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.graphics.Palette;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -103,10 +107,20 @@ public class RecycleListFragment extends Fragment {
         }
 
         @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
+        public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.mTextView.setText(mContentList.get(position));
+            int resId = mImageIdList.get(position);
+            Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(), resId);
+
+            Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
+                @Override
+                public void onGenerated(Palette palette) {
+                    //noinspection ResourceType
+                    holder.mTextView.setBackgroundColor(palette.getVibrantColor(Color.BLACK));
+                }
+            });
             Picasso.with(mContext)
-                    .load(mImageIdList.get(position))
+                    .load(resId)
                     .resize(1000, 800)
                     .into(holder.mImagePlace);
         }
