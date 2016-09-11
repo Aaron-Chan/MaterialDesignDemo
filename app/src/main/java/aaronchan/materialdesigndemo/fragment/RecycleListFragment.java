@@ -1,6 +1,7 @@
 package aaronchan.materialdesigndemo.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -23,6 +24,7 @@ import java.util.List;
 import java.util.Locale;
 
 import aaronchan.materialdesigndemo.R;
+import aaronchan.materialdesigndemo.activity.CollapsingActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -74,6 +76,8 @@ public class RecycleListFragment extends Fragment {
             @Override
             public void onItemClick(int position, String place, View view) {
                 Toast.makeText(getContext(), String.format(Locale.CHINA, "%d %s clicked", position, place), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), CollapsingActivity.class);
+                startActivity(intent);
             }
         });
         mRecycleView.setAdapter(adapter);

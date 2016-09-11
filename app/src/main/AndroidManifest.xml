@@ -25,6 +25,12 @@
         </activity>
         <activity android:name=".activity.NavigatorActivity">
         </activity>
+        <activity android:name=".activity.CollapsingActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.TabActivity"
+                />
+        </activity>
     </application>
 
 </manifest>
