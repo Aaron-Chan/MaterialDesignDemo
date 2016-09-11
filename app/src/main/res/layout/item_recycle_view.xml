@@ -18,13 +18,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/tv_name"
-            android:textSize="22sp"
-            android:gravity="center"
-            android:textAppearance="?android:textAppearanceListItem"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+         >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:textSize="22sp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_favorite_black_24dp"
+                style="?android:borderlessButtonStyle"
+                android:tint="@color/Grey"
+                />
+
+        </RelativeLayout>
     </LinearLayout>
 
 
