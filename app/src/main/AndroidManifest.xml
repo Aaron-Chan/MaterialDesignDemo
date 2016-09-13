@@ -21,15 +21,19 @@
         </activity>
         <activity
             android:name=".activity.TabActivity"
+
             android:theme="@style/CustomTheme2">
         </activity>
-        <activity android:name=".activity.NavigatorActivity">
+        <activity
+            android:name=".activity.NavigatorActivity"
+            android:theme="@style/CustomTheme2">
         </activity>
         <activity android:name=".activity.CollapsingActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.TabActivity"
-                />
+                android:value=".activity.TabActivity"/>
+        </activity>
+        <activity android:name=".activity.PlaceDetailActivity">
         </activity>
     </application>
 

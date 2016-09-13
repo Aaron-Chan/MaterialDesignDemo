@@ -19,7 +19,7 @@
             >
 
             <include
-                layout="@layout/view_toolbar"
+                layout="@layout/include_toolbar"
                 />
         </android.support.design.widget.AppBarLayout>
 
@@ -42,6 +42,6 @@
         android:fitsSystemWindows="true"
         android:layout_gravity="start"
         android:layout_height="match_parent"
-        app:headerLayout="@layout/view_navigator_header"
+        app:headerLayout="@layout/include_navigator_header"
         app:menu="@menu/menu_navigator"/>
 </android.support.v4.widget.DrawerLayout>

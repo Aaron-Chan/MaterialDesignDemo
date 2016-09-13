@@ -48,6 +48,7 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
+        <!--有     app:layout_behavior  这个才能显示在toolbar下-->
 
         <LinearLayout
             android:layout_width="match_parent"

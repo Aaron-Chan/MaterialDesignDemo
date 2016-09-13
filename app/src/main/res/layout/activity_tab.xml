@@ -5,16 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="aaronchan.materialdesigndemo.activity.ToolBarActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-        <include layout="@layout/view_toolbar"/>
+
+        <include layout="@layout/include_toolbar"/>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
+            android:fitsSystemWindows="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

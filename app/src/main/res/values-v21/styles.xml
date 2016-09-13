@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
     <style name="CustomTheme1" parent="Theme.AppCompat.Light.DarkActionBar"
@@ -27,6 +28,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@color/white</item>
         <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
     <style name="darkTheme" parent="Theme.AppCompat.Light.DarkActionBar"
@@ -38,6 +40,16 @@
         <item name="android:navigationBarColor">@color/white</item>
         <item name="android:textColorSecondary">@color/white</item>
         <item name="android:textColorPrimary">@color/RedA200</item>
+    </style>
 
+    <style name="tramiss" parent="Theme.AppCompat.Light.DarkActionBar"
+        >
+        <item name="colorPrimary">@color/Grey900</item>
+        <item name="colorPrimaryDark">@color/Black</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowBackground">@color/Grey</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColorPrimary">@color/RedA200</item>
     </style>
 </resources>

@@ -4,9 +4,11 @@
              android:layout_height="match_parent"
              tools:context="aaronchan.materialdesigndemo.fragment.TitleFragment">
 
-    <TextView
+    <ImageView
+        android:id="@+id/iv_place"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="title"/>
+        android:layout_height="100dp"
+        android:src="@drawable/shenzhen"
+        android:transitionName="place"/>
 
 </FrameLayout>

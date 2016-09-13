@@ -31,7 +31,6 @@ public class TabActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_tab);
         ButterKnife.bind(this);
         setSupportActionBar(mToolbar);

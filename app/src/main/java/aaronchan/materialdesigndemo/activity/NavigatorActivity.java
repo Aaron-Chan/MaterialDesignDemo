@@ -10,7 +10,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import aaronchan.materialdesigndemo.R;
-import aaronchan.materialdesigndemo.utils.ThemeUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -29,8 +28,6 @@ public class NavigatorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ThemeUtil.sTheme = ThemeUtil.NO_TITLE_THEME;
-        ThemeUtil.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_navigator);
         ButterKnife.bind(this);
 
